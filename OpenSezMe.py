@@ -62,8 +62,8 @@ class App(Frame):
         #Button Section
         self._newButton = Button(self._topFrame, text="New", command = self.newEntry)
         self._newButton.grid(row=0, column=0)
-        self._genButton = Button(self._bottomFrame, text="Gen.Pass.", command = self.genPass)
-        self._genButton.grid(row=3, column=2)
+        self._genButton = Button(self._bottomFrame, text="Generate Password", command = self.genPass)
+        self._genButton.grid(row=3, column=2, sticky=W)
         self._saveButton = Button(self._topFrame, text='Save', command=self.saveEntry)
         self._saveButton.grid(row=0, column=2)
         self._delButton = Button(self._topFrame, text="Delete", command = self.delEnt)
@@ -83,7 +83,7 @@ class App(Frame):
         self._lenLabel = Label(self._bottomFrame, text='Length')
         self._lenLabel.grid(row=2, column=1)
         self._lenEntry = Entry(self._bottomFrame, font=("Menlo", 14), textvariable=self._lenVar)
-        self._lenEntry.grid(row=3, column=1, sticky=W)
+        self._lenEntry.grid(row=3, column=1, sticky=E)
 
     def saveEntry(self):
         if self._passVar.get() == "********":
