@@ -26,5 +26,4 @@ Mayb clean up the UI or construct it with a different toolkit altogether.
 
 Files: OpenSezMe.py
        passdat.py
-       passdb
        
