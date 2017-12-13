@@ -8,7 +8,7 @@ db = {}
 try:
     with open('passdb', 'rb') as file_obj:
         db = pickle.load(file_obj)
-except EOFError:
+except:
     pass
 
 class App(Frame):
